@@ -11,7 +11,8 @@
     "url": "git@bitbucket.org:IonicaBizau/jsfiddle-api.git"
   },
   "dependencies": {
-    "request": "*"
+    "request": "*",
+    "cheerio": "*"
   },
   "keywords": [
     "jsfiddle",
