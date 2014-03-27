@@ -45,5 +45,10 @@ $ npm test
      - `js`: the JavaScript code
      - `css`: and the CSS code
 
+## Changelog
+
+### `v0.1.0`
+ - Initial release
+
 ## License
 See LICENSE file.
