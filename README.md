@@ -10,7 +10,7 @@ Node library for accessing JSFiddle resources.
 var JSFiddleApi = require ("jsfiddle-api");
 
 // get this fiddle
-JSFiddleApi.getFiddle ("iu8B29/1", function (err, fiddleObj) {
+JSFiddleApi.getFiddle ("u8B29", function (err, fiddleObj) {
 
     // handle error
     if (err) { return console.log (err); }
