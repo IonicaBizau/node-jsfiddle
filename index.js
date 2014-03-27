@@ -95,9 +95,9 @@ var JSFiddleApi = {
 
                 // finally return an object containing `html`, `js` and `css` fields
                 callback (null, {
-                    html: $("#id_code_html").val()
-                  , js:   $("#id_code_js").val()
-                  , css:  $("#id_code_css").val()
+                    html: $("#id_code_html").html()
+                  , js:   $("#id_code_js").html()
+                  , css:  $("#id_code_css").html()
                 });
             });
         }
