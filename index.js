@@ -69,7 +69,7 @@ var JSFiddleApi = {
         if (options.constructor === String) {
 
             // build the url
-            var url = JSFIDDLE_ID + options;
+            var url = JSFIDDLE_URL + options;
 
             // run the request
             Request.get(url, function (err, response, body) {
