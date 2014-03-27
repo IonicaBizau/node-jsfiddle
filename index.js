@@ -29,7 +29,7 @@
  */
 // dependencies
 var Request = require("request")
-  , HtmlDecoderEncoder = require("html-decoder-encoder")
+  , HtmlEncoderDecoder = require("html-encoder-decoder")
   , Cheerio = require ("cheerio")
   ;
 
@@ -88,7 +88,7 @@ var JSFiddleApi = {
                 }
 
                 // override body response decoding it
-                body = HtmlDecoderEncoder.decode (body);
+                body = HtmlEncoderDecoder.decode (body);
 
                 // parse HTML
                 var $ = Cheerio.load(body);
