@@ -61,7 +61,15 @@ var JSFiddleApi = {
                 // override body response decoding it
                 body = HtmlDecoderEncoder.decode (body);
 
+                // parse HTML
+                var $ = Cheerio.load(body);
 
+                // finally return an object containing `html`, `js` and `css` fields
+                callback (null, {
+                    html: $("#id_code_html").val()
+                  , js:   $("#id_code_js").val()
+                  , css:  $("#id_code_css").val()
+                });
             });
         }
     }
