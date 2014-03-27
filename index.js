@@ -34,7 +34,7 @@ var Request = require("request")
   ;
 
 // constants
-const JSFDIDLE_URL = "http://jsfiddle.net/"
+const JSFIDDLE_URL = "http://jsfiddle.net/"
 
 // constructor
 var JSFiddleApi = {
