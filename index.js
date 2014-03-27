@@ -103,3 +103,6 @@ var JSFiddleApi = {
         }
     }
 };
+
+// export JSFiddleApi object
+module.exports = JSFiddleApi;
