@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "request": "*",
-    "cheerio": "*"
+    "cheerio": "*",
+    "html-encoder-decoder": "*"
   },
   "keywords": [
     "jsfiddle",
