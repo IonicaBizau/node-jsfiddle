@@ -24,6 +24,13 @@ Run this example using
 
 ```sh
 $ npm test
+
+> jsfiddle-api@0.0.1 test /home/.../jsfiddle-api
+> node test/1.js
+
+{ html: '<div class="hi">Hi</div>',
+  js: '$(".hi").fadeOut();',
+  css: '.hi {\n    color: red;\n}' }
 ```
 
 ## Methods
