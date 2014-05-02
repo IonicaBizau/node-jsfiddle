@@ -1,6 +1,6 @@
 {
-  "name": "jsfiddle-api",
-  "version": "0.0.1",
+  "name": "jsfiddle",
+  "version": "0.1.0",
   "description": "JSFiddle API for NodeJS",
   "main": "index.js",
   "scripts": {

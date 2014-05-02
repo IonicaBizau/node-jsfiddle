@@ -1,5 +1,5 @@
-JSFiddle Api
-============
+node-jsfiddle
+=============
 
 Node library for accessing JSFiddle resources.
 
@@ -7,7 +7,7 @@ Node library for accessing JSFiddle resources.
 
 ```js
 // require jsfiddle api
-var JSFiddleApi = require ("jsfiddle-api");
+var JSFiddleApi = require ("jsfiddle");
 
 // get this fiddle
 JSFiddleApi.getFiddle ("u8B29", function (err, fiddleObj) {
@@ -25,7 +25,7 @@ Run this example using
 ```sh
 $ npm test
 
-> jsfiddle-api@0.0.1 test /home/.../jsfiddle-api
+> jsfiddle@0.0.1 test /home/.../jsfiddle
 > node test/1.js
 
 { html: '<div class="hi">Hi</div>',
@@ -48,6 +48,9 @@ $ npm test
 ## Changelog
 
 ### `v0.1.0`
+ - Renamed the library: `jsfiddle`
+
+### `v0.0.1`
  - Initial release
 
 ## License
