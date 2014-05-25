@@ -147,9 +147,8 @@ var JSFiddleApi = {
               , code_css:  new Buffer(options.css).toString("base64")
               , DEBUG: true
             })
-        }, function(error, response, body){
+        }, function(err, response, body){
 
-            debugger;
             // handle error
             if (err) {
                 return callback (err, null);
