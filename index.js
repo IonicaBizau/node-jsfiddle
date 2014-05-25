@@ -27,9 +27,11 @@
  *  SOFTWARE.
  *
  */
+
 // dependencies
 var Request = require("request")
   , HtmlEncoderDecoder = require("html-encoder-decoder")
+  , QueryString = require("querystring")
   , Cheerio = require ("cheerio")
   ;
 
@@ -38,6 +40,7 @@ const JSFIDDLE_URL = "http://jsfiddle.net/"
 
 // constructor
 var JSFiddleApi = {
+
     /**
      * JSFiddleApi#getFiddle
      *
@@ -101,6 +104,78 @@ var JSFiddleApi = {
                 });
             });
         }
+    }
+
+    /**
+     * JSFiddleApi#saveFiddle
+     *
+     *  Arguments
+     *    @options: string in this format: "JSFIDDLE_ID/VERSION"
+     *
+     *    version:4
+     *    slug:cJvLD
+     *    code_html:xIM=
+     *    code_js:
+     *    code_css:
+     *
+     */
+  , saveFiddle: function (options, callback) {
+
+        // set callback default value
+        callback = callback || function () {};
+
+        // validate
+        if (typeof callback !== "function") {
+            throw new Error ("Callback must be a function.")
+        }
+
+        // validate options
+        if (!options || options.constructor !== Object) {
+            return callback ("First argument must be an object.", null);
+        }
+
+        Request.post ({
+            headers: {
+                "content-type" : "application/x-www-form-urlencoded"
+            }
+          , url: "http://jsfiddle.net/_save/"
+          , body: QueryString.encode ({
+                slug: options.slug
+              , version: options.version
+              , code_html: new Buffer(options.html).toString("base64")
+              , code_js:   new Buffer(options.js).toString("base64")
+              , code_css:  new Buffer(options.css).toString("base64")
+              , DEBUG: true
+            })
+        }, function(error, response, body){
+
+            debugger;
+            // handle error
+            if (err) {
+                return callback (err, null);
+            }
+
+            // not a 200 status code
+            if (response.statusCode !== 200) {
+                return callback ({
+                    statusCode: response.statusCode
+                  , message: "The page responsed with a status code different than 200: " + response.statusCode
+                }, null);
+            }
+
+            // override body response decoding it
+            body = HtmlEncoderDecoder.decode (body);
+
+            // parse HTML
+            var $ = Cheerio.load(body);
+
+            // finally return an object containing `html`, `js` and `css` fields
+            callback (null, {
+                html: $("#id_code_html").html()
+              , js:   $("#id_code_js").html()
+              , css:  $("#id_code_css").html()
+            });
+        });
     }
 };
 
