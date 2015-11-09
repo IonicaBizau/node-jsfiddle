@@ -1,6 +1,6 @@
 {
   "name": "jsfiddle",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "JSFiddle API for NodeJS",
   "main": "index.js",
   "scripts": {
@@ -20,8 +20,8 @@
     "api",
     "nodejs"
   ],
-  "author": "Ionică Bizău <bizauionica@gmail.com>",
-  "license": "MIT",
+  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "license": "KINDLY",
   "directories": {
     "test": "test"
   },

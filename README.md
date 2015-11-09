@@ -1,13 +1,18 @@
-node-jsfiddle
-=============
+# jsfiddle [![Support this project][donate-now]][paypal-donations]
 
-Node library for accessing JSFiddle resources.
+JSFiddle API for NodeJS
 
-## Example and test
+## Installation
+
+```sh
+$ npm i jsfiddle
+```
+
+## Example
 
 ```js
 // require jsfiddle api
-var JSFiddleApi = require ("jsfiddle");
+var JSFiddleApi = require ("../index");
 
 // get this fiddle
 JSFiddleApi.getFiddle ("u8B29", function (err, fiddleObj) {
@@ -16,42 +21,39 @@ JSFiddleApi.getFiddle ("u8B29", function (err, fiddleObj) {
     if (err) { return console.log (err); }
 
     // output the response
-    console.log (fiddleObj)
+    console.log(fiddleObj)
 });
 ```
 
-Run this example using
+## Documentation
 
-```sh
-$ npm test
+### `getFiddle(options, callback)`
 
-> jsfiddle@0.0.1 test /home/.../jsfiddle
-> node test/1.js
+#### Params
+- **String** `options`: A string in this format: `"JSFIDDLE_ID/VERSION"`
+- **Function** `callback`: The callback function.
 
-{ html: '<div class="hi">Hi</div>',
-  js: '$(".hi").fadeOut();',
-  css: '.hi {\n    color: red;\n}' }
-```
+### `saveFiddle({}, callback)`
 
-## Methods
+#### Params
+- **** `{}`: options
+- **Function** `callback`: The callback function.
 
-### `getFiddle (@options, @callback)`
+## How to contribute
+Have an idea? Found a bug? See [how to contribute][contributing].
 
- - `@options` is a string containing the fiddle id and the version (e.g. `"iu8B29/1"`)
- - `@callback` is a function that will be called after fetching the fiddle information
-   - First parameter will be the error (`null` if the call was made successfully)
-   - Second parameter will be an object containing three fields:
-     - `html`: the HTML code provided in the JSFiddle
-     - `js`: the JavaScript code
-     - `css`: and the CSS code
-
-## Changelog
-
-### `v0.1.0`
- - Renamed the library: `jsfiddle`
-
-### `v0.0.1`
- - Initial release
+## Where is this library used?
+If you are using this library in one of your projects, add it in this list. :sparkles:
 
 ## License
-See LICENSE file.
+
+[KINDLY][license] © [Ionică Bizău][website]
+
+[license]: http://ionicabizau.github.io/kindly-license/?author=Ionic%C4%83%20Biz%C4%83u%20%3Cbizauionica@gmail.com%3E&year=2014
+
+[website]: http://ionicabizau.net
+[paypal-donations]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RVXDDLKKLQRJW
+[donate-now]: http://i.imgur.com/6cMbHOC.png
+
+[contributing]: /CONTRIBUTING.md
+[docs]: /DOCUMENTATION.md
