@@ -1,6 +1,6 @@
 {
   "name": "jsfiddle",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "JSFiddle API for NodeJS",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/IonicaBizau/jsfiddle-api.git"
+    "url": "git+ssh://git@bitbucket.org/IonicaBizau/node-jsfiddle.git"
   },
   "dependencies": {
     "request": "*",
@@ -26,5 +26,5 @@
     "example": "example"
   },
   "devDependencies": {},
-  "homepage": "https://bitbucket.org/IonicaBizau/jsfiddle-api#readme"
+  "homepage": "https://bitbucket.org/IonicaBizau/node-jsfiddle#readme"
 }
