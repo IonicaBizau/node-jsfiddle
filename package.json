@@ -6,10 +6,6 @@
   "scripts": {
     "test": "node test/1.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@bitbucket.org/IonicaBizau/node-jsfiddle.git"
-  },
   "dependencies": {
     "request": "*",
     "cheerio": "*",
@@ -26,5 +22,12 @@
     "example": "example"
   },
   "devDependencies": {},
-  "homepage": "https://bitbucket.org/IonicaBizau/node-jsfiddle#readme"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IonicaBizau/node-jsfiddle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/node-jsfiddle/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/node-jsfiddle#readme"
 }
