@@ -17,11 +17,10 @@ $ npm i --save jsfiddle
 
 
 ```js
-// require jsfiddle api
-var JSFiddleApi = require ("../index");
+const JSFiddle = require ("..");
 
 // get this fiddle
-JSFiddleApi.getFiddle ("u8B29", function (err, fiddleObj) {
+JSFiddle.getFiddle("u8B29", (err, fiddleObj) => {
 
     // handle error
     if (err) { return console.log (err); }
@@ -35,13 +34,11 @@ JSFiddleApi.getFiddle ("u8B29", function (err, fiddleObj) {
 
 
 ### `getFiddle(options, callback)`
-
 #### Params
 - **String** `options`: A string in this format: `"JSFIDDLE_ID/VERSION"`
 - **Function** `callback`: The callback function.
 
 ### `saveFiddle({}, callback)`
-
 #### Params
 - **** `{}`: options
 - **Function** `callback`: The callback function.
