@@ -46,7 +46,7 @@ var JSFiddleApi = {
             var url = JSFIDDLE_URL + options;
 
             // run the request
-            Request.get(url, function (err, response, body) {
+            Request.get(url + '/embedded', function (err, response, body) {
 
                 // handle error
                 if (err) {
@@ -61,17 +61,16 @@ var JSFiddleApi = {
                     }, null);
                 }
 
-                // override body response decoding it
-                body = HtmlEncoderDecoder.decode (body);
-
                 // parse HTML
                 var $ = Cheerio.load(body);
 
+                var panes = $("pre");
+
                 // finally return an object containing `html`, `js` and `css` fields
                 callback (null, {
-                    html: $("#id_code_html").html()
-                  , js:   $("#id_code_js").html()
-                  , css:  $("#id_code_css").html()
+                    html: panes.eq(1).text()
+                , js:   panes.eq(0).text()
+                , css:  panes.eq(2).text()
                 });
             });
         }
