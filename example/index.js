@@ -1,8 +1,7 @@
-// require jsfiddle api
-var JSFiddleApi = require ("../index");
+const JSFiddle = require ("..");
 
 // get this fiddle
-JSFiddleApi.getFiddle ("u8B29", function (err, fiddleObj) {
+JSFiddle.getFiddle("u8B29", (err, fiddleObj) => {
 
     // handle error
     if (err) { return console.log (err); }
