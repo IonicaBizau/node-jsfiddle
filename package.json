@@ -1,6 +1,6 @@
 {
   "name": "jsfiddle",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "JSFiddle API for NodeJS",
   "main": "lib/index.js",
   "scripts": {
@@ -43,6 +43,9 @@
     "resources/",
     "menu/",
     "cli.js",
-    "index.js"
+    "index.js",
+    "bloggify.js",
+    "bloggify.json",
+    "bloggify/"
   ]
 }
