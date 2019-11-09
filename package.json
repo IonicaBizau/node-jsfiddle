@@ -4,7 +4,7 @@
   "description": "JSFiddle API for NodeJS",
   "main": "lib/index.js",
   "scripts": {
-    "test": "node test/1.js"
+    "test": "node test/index.js"
   },
   "dependencies": {
     "request": "*",
