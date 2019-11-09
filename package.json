@@ -4,7 +4,7 @@
   "description": "JSFiddle API for NodeJS",
   "main": "lib/index.js",
   "scripts": {
-    "test": "node test/index.js"
+    "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "dependencies": {
     "request": "*",
@@ -24,7 +24,10 @@
   "directories": {
     "example": "example"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/IonicaBizau/node-jsfiddle.git"
