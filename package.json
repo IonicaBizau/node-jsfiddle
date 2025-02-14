@@ -1,6 +1,6 @@
 {
   "name": "jsfiddle",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "JSFiddle API for NodeJS",
   "main": "lib/index.js",
   "scripts": {
@@ -48,6 +48,8 @@
     "menu/",
     "cli.js",
     "index.js",
+    "index.d.ts",
+    "package-lock.json",
     "bloggify.js",
     "bloggify.json",
     "bloggify/"
